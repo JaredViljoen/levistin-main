@@ -886,7 +886,7 @@ footer {
 
 
 .about-insp {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/beach-inspirational.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/beach-inspirational.webp);
 
 }
 
@@ -1050,3 +1050,31 @@ footer {
     }
   }
 }
+
+// Contact Us Page
+
+.contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .contact-field {
+    color: $primaryClr;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+
+    a {
+    color:$primaryClr;
+
+    &:hover {
+      color: $primaryClrHov;
+    }
+    }
+
+    i {
+      margin-right: 20px;
+    }
+  }
+}
+
+

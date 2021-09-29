@@ -1087,8 +1087,8 @@ footer .footer-members {
 }
 
 .about-insp {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(../media/beach-inspirational.webp);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../media/beach-inspirational.webp);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url(../media/beach-inspirational.webp);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../media/beach-inspirational.webp);
 }
 
 .about-int {
@@ -1279,5 +1279,35 @@ footer .footer-members {
   padding-left: 20px;
   margin-bottom: 10px;
   margin-left: 1rem;
+}
+
+.contact-us {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact-us .contact-field {
+  color: #002e5c;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.contact-us .contact-field a {
+  color: #002e5c;
+}
+
+.contact-us .contact-field a:hover {
+  color: #003870;
+}
+
+.contact-us .contact-field i {
+  margin-right: 20px;
 }
 /*# sourceMappingURL=styles.css.map */
