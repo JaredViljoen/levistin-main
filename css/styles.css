@@ -1093,6 +1093,8 @@ footer .footer-members {
 
 .about-int {
   padding-bottom: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .about-int h2,
@@ -1115,15 +1117,35 @@ footer .footer-members {
 
 .our-way-bg {
   position: relative;
+  overflow: hidden;
 }
 
-.our-way-bg h2 {
+.our-way-bg::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  background-image: url(../media/background-pattern.svg);
+  background-size: 45px 45px;
+  background-repeat: repeat;
+  width: 30%;
+  height: 200%;
+  z-index: -1;
+}
+
+.our-way-deets {
+  position: relative;
+  overflow: hidden;
+}
+
+.our-way-deets h2 {
   color: #002e5c;
   position: relative;
   padding-left: 30px;
 }
 
-.our-way-bg h2::before {
+.our-way-deets h2::before {
   content: "";
   height: 100%;
   width: 9px;
@@ -1134,28 +1156,7 @@ footer .footer-members {
   display: block;
 }
 
-.our-way-bg::after {
-  content: '';
-  background-image: url(../media/sailing-background.webp);
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 80px;
-  left: 65%;
-  border-radius: 30px 0 0 30px;
-}
-
-@media screen and (max-width: 600px) {
-  .our-way-bg::after {
-    background-size: 100% 100%;
-    top: 130px;
-  }
-}
-
-.our-way-bg .our-way-deets {
+.our-way-deets {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1166,29 +1167,27 @@ footer .footer-members {
   gap: 50px;
 }
 
-.our-way-bg .our-way-deets .our-way-block {
+.our-way-deets .our-way-block {
   background-color: white;
-  border-radius: 0 30px 30px 0;
   padding: 3rem;
   width: 80%;
-  -webkit-box-shadow: 4px 4px 11px -2px rgba(0, 0, 0, 0.4);
-          box-shadow: 4px 4px 11px -2px rgba(0, 0, 0, 0.4);
+  border: solid 2px #d3d3d3;
   min-height: 16rem;
 }
 
 @media screen and (max-width: 900px) {
-  .our-way-bg .our-way-deets .our-way-block {
+  .our-way-deets .our-way-block {
     width: 100%;
   }
 }
 
 @media screen and (max-width: 375px) {
-  .our-way-bg .our-way-deets .our-way-block {
+  .our-way-deets .our-way-block {
     padding: 2rem;
   }
 }
 
-.our-way-bg .our-way-deets .our-way-block .our-way-head {
+.our-way-deets .our-way-block .our-way-head {
   color: #002e5c;
   margin-bottom: 30px;
   display: -webkit-box;
@@ -1203,7 +1202,7 @@ footer .footer-members {
 }
 
 @media screen and (max-width: 375px) {
-  .our-way-bg .our-way-deets .our-way-block .our-way-head {
+  .our-way-deets .our-way-block .our-way-head {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1217,7 +1216,7 @@ footer .footer-members {
   }
 }
 
-.our-way-bg .our-way-deets .our-way-block .our-way-head svg {
+.our-way-deets .our-way-block .our-way-head svg {
   height: 3rem;
   width: auto;
   fill: #f9c939;
@@ -1226,48 +1225,52 @@ footer .footer-members {
 }
 
 @media screen and (max-width: 375px) {
-  .our-way-bg .our-way-deets .our-way-block .our-way-head svg {
+  .our-way-deets .our-way-block .our-way-head svg {
     margin-bottom: 20px;
   }
 }
 
-.our-way-bg .about-values {
+.about-values {
   padding-top: 0;
   margin-left: 2.5rem;
 }
 
 @media screen and (max-width: 600px) {
-  .our-way-bg .about-values {
+  .about-values {
     background-color: white;
     margin-left: 0;
     padding-top: 30px;
   }
 }
 
-.our-way-bg .about-values p {
+.about-values h2 {
+  color: #002e5c;
+}
+
+.about-values p {
   margin-bottom: 30px;
   width: 45%;
 }
 
 @media screen and (max-width: 1200px) {
-  .our-way-bg .about-values p {
+  .about-values p {
     width: 70%;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .our-way-bg .about-values p {
+  .about-values p {
     width: 65%;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .our-way-bg .about-values p {
+  .about-values p {
     width: 100%;
   }
 }
 
-.our-way-bg .about-values .values-list li::marker {
+.about-values .values-list li::marker {
   content: '\f3a5';
   font-family: 'Font Awesome 5 Free';
   font-size: 1rem;
@@ -1275,10 +1278,15 @@ footer .footer-members {
   color: #f9c939;
 }
 
-.our-way-bg .about-values .values-list li {
+.about-values .values-list li {
   padding-left: 20px;
   margin-bottom: 10px;
   margin-left: 1rem;
+}
+
+.cont-insp {
+  background-image: url(../media/contact-inspirational.webp);
+  background-position: center;
 }
 
 .contact-us {
@@ -1300,7 +1308,7 @@ footer .footer-members {
 }
 
 .contact-us .contact-field a {
-  color: #002e5c;
+  color: black;
 }
 
 .contact-us .contact-field a:hover {
