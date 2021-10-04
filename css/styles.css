@@ -1293,9 +1293,8 @@ footer .footer-members {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -1317,5 +1316,38 @@ footer .footer-members {
 
 .contact-us .contact-field i {
   margin-right: 20px;
+}
+
+.contact-us .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+.contact-us .contact-form input {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 1px solid #cccccc;
+}
+
+.contact-us .contact-form input:focus {
+  outline: none;
+  border: 1px solid #003870;
+}
+
+.contact-us .contact-form .contact-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=styles.css.map */

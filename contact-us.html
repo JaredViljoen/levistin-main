@@ -82,16 +82,33 @@ That said, we value our close relationships with our clients and like to meet in
             <p class="contact-field"><i class="fas fa-phone-alt"></i><a href="tel:+27765226147">+27 76 522 6147</a></p>
             <p class="contact-field"><i class="far fa-envelope"></i><a href="mailto:info@levistin.co.za">info@levistin.co.za</a></p>
         </div>
-        <div class="contact-form"></div>
-        <form action="https://formsubmit.co/jaredviljoen@gmail.com" method="POST">
+        <div class="contact-form-sect"></div>
+        <form class="contact-form" action="https://formsubmit.co/jaredviljoen@gmail.com" method="POST">
             <div class="contact-name">
             <label for="name">First Name</label>
             <input type="text" name="name" required>
             <label for="surname">Surname</label>
             <input type="text" name="surname" required>
         </div>
+            <label for="company">Company Name</label>
+            <input type="text" name="company" required>
             <label for="email">Email Address</label>
             <input type="email" name="email" required>
+            <label for="phone">Contact Number</label>
+            <input type="tel" name="phone" required>
+            <div class="services-select">
+            <label for="services">I'm interesting the following services:</label>
+            <input type="checkbox" id="accounting" name="service1" value="Accounting">
+            <label for="service1">Accounting</label>
+            <input type="checkbox" id="taxation" name="service2" value="Taxation">
+            <label for="service2">Taxation</label>
+            <input type="checkbox" id="automation" name="service3" value="Automation">
+            <label for="service3">Automation</label>
+            <input type="checkbox" id="advisory" name="service4" value="Advisory">
+            <label for="service1">Advisory</label>
+            <input type="checkbox" id="other" name="service5" value="Other">
+            <label for="service5">Other</label>
+          </div>
             <button type="submit">Submit</button>
        </form>
 

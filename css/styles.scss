@@ -1090,7 +1090,7 @@ footer {
 
 .contact-us {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 
   .contact-field {
@@ -1110,6 +1110,32 @@ footer {
       margin-right: 20px;
     }
   }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+
+    input {
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      border: 1px solid #cccccc;
+
+      &:focus {
+        outline: none;
+        border: 1px solid $primaryClrHov;
+      }
+    }
+
+    .contact-name {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+  }
 }
+
+
 
 
