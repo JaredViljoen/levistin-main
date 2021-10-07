@@ -85,33 +85,51 @@ That said, we value our close relationships with our clients and like to meet in
         <div class="contact-form-sect"></div>
         <form class="contact-form" action="https://formsubmit.co/jaredviljoen@gmail.com" method="POST">
             <div class="contact-name">
-            <label for="name">First Name</label>
+              <div class="names">
+            <label for="name">First Name<span>*</span></label>
             <input type="text" name="name" required>
-            <label for="surname">Surname</label>
-            <input type="text" name="surname" required>
-        </div>
-            <label for="company">Company Name</label>
-            <input type="text" name="company" required>
-            <label for="email">Email Address</label>
-            <input type="email" name="email" required>
-            <label for="phone">Contact Number</label>
-            <input type="tel" name="phone" required>
-            <div class="services-select">
-            <label for="services">I'm interesting the following services:</label>
-            <input type="checkbox" id="accounting" name="service1" value="Accounting">
-            <label for="service1">Accounting</label>
-            <input type="checkbox" id="taxation" name="service2" value="Taxation">
-            <label for="service2">Taxation</label>
-            <input type="checkbox" id="automation" name="service3" value="Automation">
-            <label for="service3">Automation</label>
-            <input type="checkbox" id="advisory" name="service4" value="Advisory">
-            <label for="service1">Advisory</label>
-            <input type="checkbox" id="other" name="service5" value="Other">
-            <label for="service5">Other</label>
           </div>
-            <button type="submit">Submit</button>
-       </form>
+          <div class="names">
+            <label for="surname">Surname<span>*</span></label>
+            <input type="text" name="surname" required>
+          </div>
+        </div>
+            <label for="company">Company Name<span>*</span></label>
+            <input type="text" name="company" required>
+            <label for="email">Email Address<span>*</span></label>
+            <input type="email" name="email" required>
+            <label for="phone">Contact Number<span>*</span></label>
+            <input type="tel" name="phone" required>
+            <label for="company-website">Company Website</label>
+            <input type="text" name="company-website">
+            <div class="services-select">
+            <p>I'm interesting the following services:</p>
 
+
+            <label class="container">Accounting
+              <input type="checkbox" value="Accounting">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Taxation
+              <input type="checkbox" value="Taxation">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Automation
+              <input type="checkbox" value="Automation">
+              <span class="checkmark"></span>
+            </label>
+            <label class="container">Advisory Services
+              <input type="checkbox" value="Advisory">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <label for="message">Message</span></label>
+          <textarea id="message" name="message" rows="4" columns="50"></textarea>
+
+          
+            <button class="primary-cta contact-button" type="submit">Submit</button>
+       </form>
+ 
     </section>
 
 
