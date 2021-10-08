@@ -1094,6 +1094,7 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  flex-wrap: wrap;
 
   .contact-field {
     color: $primaryClr;
@@ -1113,10 +1114,13 @@ footer {
     }
   }
 
+  .contact-form-sect{
+
+    width: 60%;
+
   .contact-form {
     display: flex;
     flex-direction: column;
-    width: 60%;
 
     input {
       margin-bottom: 20px;
@@ -1143,7 +1147,11 @@ footer {
       display: flex;
       justify-content: space-between;
       gap: 30px;
-      
+
+      @include md{
+      flex-wrap: wrap;
+      gap: 0;
+    }      
       .names {
         display: flex;
         flex-direction: column;
@@ -1153,71 +1161,13 @@ footer {
     }
 
 .services-select {
-  margin-bottom: 20px;
 
-.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  margin-top: 20px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+  p {
+    margin-bottom: 20px;
+  }
+  
 
 
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eaeaea;
-  border-radius: 5px;
-}
-
-
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.container input:checked ~ .checkmark {
-  background-color: $primaryClrHov;
-}
-
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
 }
 
 .contact-button {
@@ -1227,7 +1177,7 @@ footer {
 }
 
   }
-}
+}}
 
 
 

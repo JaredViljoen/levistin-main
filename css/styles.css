@@ -1298,6 +1298,8 @@ footer .footer-members {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .contact-us .contact-field {
@@ -1318,7 +1320,11 @@ footer .footer-members {
   margin-right: 20px;
 }
 
-.contact-us .contact-form {
+.contact-us .contact-form-sect {
+  width: 60%;
+}
+
+.contact-us .contact-form-sect .contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1326,31 +1332,30 @@ footer .footer-members {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 60%;
 }
 
-.contact-us .contact-form input {
+.contact-us .contact-form-sect .contact-form input {
   margin-bottom: 20px;
   padding: 10px 20px;
   border: 1px solid #cccccc;
 }
 
-.contact-us .contact-form input:focus {
+.contact-us .contact-form-sect .contact-form input:focus {
   outline: none;
   border: 1px solid #003870;
 }
 
-.contact-us .contact-form label {
+.contact-us .contact-form-sect .contact-form label {
   margin-bottom: 10px;
 }
 
-.contact-us .contact-form span {
+.contact-us .contact-form-sect .contact-form span {
   color: red;
   font-size: 0.8rem;
   margin-left: 2px;
 }
 
-.contact-us .contact-form .contact-name {
+.contact-us .contact-form-sect .contact-form .contact-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1360,7 +1365,15 @@ footer .footer-members {
   gap: 30px;
 }
 
-.contact-us .contact-form .contact-name .names {
+@media screen and (max-width: 900px) {
+  .contact-us .contact-form-sect .contact-form .contact-name {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 0;
+  }
+}
+
+.contact-us .contact-form-sect .contact-form .contact-name .names {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1371,71 +1384,11 @@ footer .footer-members {
   width: 100%;
 }
 
-.contact-us .contact-form .services-select {
+.contact-us .contact-form-sect .contact-form .services-select p {
   margin-bottom: 20px;
 }
 
-.contact-us .contact-form .services-select .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  margin-top: 20px;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.contact-us .contact-form .services-select .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
-
-.contact-us .contact-form .services-select .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eaeaea;
-  border-radius: 5px;
-}
-
-.contact-us .contact-form .services-select .container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-.contact-us .contact-form .services-select .container input:checked ~ .checkmark {
-  background-color: #003870;
-}
-
-.contact-us .contact-form .services-select .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-.contact-us .contact-form .services-select .container input:checked ~ .checkmark:after {
-  display: block;
-}
-
-.contact-us .contact-form .services-select .container .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.contact-us .contact-form .contact-button {
+.contact-us .contact-form-sect .contact-form .contact-button {
   width: 35%;
   margin-top: 20px;
   border-radius: 0px;
