@@ -474,7 +474,7 @@ nav img {
 }
 
 .our-way .our-way-cards .way-card .way-deets svg {
-  width: 4.5rem;
+  width: 4rem;
   fill: #002e5c;
   position: absolute;
   top: -70px;
@@ -585,7 +585,7 @@ nav img {
 
 .services-section {
   text-align: center;
-  color: #f9c939;
+  color: white;
   background: url(../media/background-shape.svg);
   background-size: cover;
   display: -webkit-box;
@@ -792,7 +792,7 @@ footer .footer-links {
           flex-direction: column;
   gap: 20px;
   position: relative;
-  padding-left: 140px;
+  padding-left: 60px;
 }
 
 footer .footer-links a {
@@ -1137,6 +1137,14 @@ footer .footer-members {
 .our-way-deets {
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 50px;
 }
 
 .our-way-deets h2 {
@@ -1154,17 +1162,6 @@ footer .footer-members {
   top: 0;
   left: 0;
   display: block;
-}
-
-.our-way-deets {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 50px;
 }
 
 .our-way-deets .our-way-block {
@@ -1289,6 +1286,40 @@ footer .footer-members {
   background-position: center;
 }
 
+.contact-int {
+  padding: 4.5rem 9rem 0 9rem;
+}
+
+@media screen and (max-width: 900px) {
+  .contact-int {
+    padding: 3rem 4rem 0 4rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-int {
+    padding: 3rem 3rem 0 3rem;
+  }
+}
+
+.contact-int h2 {
+  color: #002e5c;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 50px;
+}
+
+.contact-int h2::before {
+  content: "";
+  height: 100%;
+  width: 9px;
+  background-color: #f9c939;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+}
+
 .contact-us {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1302,26 +1333,56 @@ footer .footer-members {
       flex-wrap: wrap;
 }
 
-.contact-us .contact-field {
+@media screen and (max-width: 600px) {
+  .contact-us {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+.contact-us .contact-details {
   color: #002e5c;
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin-bottom: 50px;
 }
 
-.contact-us .contact-field a {
+.contact-us .contact-details .contact-deets {
+  margin-bottom: 30px;
+}
+
+.contact-us .contact-details h3 {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-us .contact-details {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+.contact-us .contact-details a {
   color: black;
 }
 
-.contact-us .contact-field a:hover {
+.contact-us .contact-details a:hover {
   color: #003870;
-}
-
-.contact-us .contact-field i {
-  margin-right: 20px;
 }
 
 .contact-us .contact-form-sect {
   width: 60%;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-us .contact-form-sect {
+    width: 100%;
+  }
 }
 
 .contact-us .contact-form-sect .contact-form {

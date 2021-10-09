@@ -404,7 +404,7 @@ nav {
         transition-delay: 0.1s;
 
         svg {
-          width: 4.5rem;
+          width: 4rem;
           fill: $primaryClr;
           position: absolute;
           top: -70px;
@@ -498,7 +498,7 @@ nav {
 
 .services-section {
   text-align: center;
-  color: $secondaryClr;
+  color: white;
   background: url(../media/background-shape.svg);
   background-size: cover;
   display: flex;
@@ -657,7 +657,7 @@ footer {
     flex-direction: column;
     gap: 20px;
     position: relative;
-    padding-left: 140px;
+    padding-left: 60px;
 
     a {
       text-decoration: none;
@@ -938,6 +938,9 @@ footer {
 .our-way-deets {
   position: relative;
   overflow: hidden;
+  display: flex;
+    flex-direction: column;
+    gap: 50px;
  
 
   h2 {
@@ -978,12 +981,9 @@ footer {
   //     top: 130px;
   //   }
 
-  }
-  .our-way-deets {
+  
 
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
+    
 
 
   
@@ -1090,16 +1090,70 @@ footer {
 
 }
 
+.contact-int {
+
+  padding: 4.5rem 9rem 0 9rem;
+
+  @include md {
+    padding: 3rem 4rem 0 4rem;
+  }
+
+  @include sm {
+    padding: 3rem 3rem 0 3rem;
+  }
+
+  h2 {
+    color: $primaryClr;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 50px;
+
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 9px;
+      background-color: $secondaryClr;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+    }
+  
+}
+
+}
+
 .contact-us {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
 
-  .contact-field {
+  @include sm {
+    align-items: center;
+    justify-content: start;
+  }
+
+  .contact-details {
     color: $primaryClr;
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 50px;
+
+    .contact-deets {
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
+
+    @include sm {
+      margin-bottom: 30px;
+      font-size: 1.2rem;;
+    }
 
     a {
     color:black;
@@ -1109,14 +1163,16 @@ footer {
     }
     }
 
-    i {
-      margin-right: 20px;
-    }
+
   }
 
   .contact-form-sect{
 
     width: 60%;
+
+    @include sm {
+      width: 100%;
+    }
 
   .contact-form {
     display: flex;
